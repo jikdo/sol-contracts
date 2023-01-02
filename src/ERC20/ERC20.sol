@@ -18,7 +18,7 @@ contract ERC20 is IERC20 {
         _totalSupply = _totalSupply;
 
         // transfer to msg.sender
-        balance[msg.sender] = _totalSupply
+        balance[msg.sender] = _totalSupply;
     }
 
     function name() public view returns (string memory) {
@@ -37,7 +37,16 @@ contract ERC20 is IERC20 {
         return _totalSupply;
     }
 
-    function balanceOf(_owner) public view returns (uint256) {
+    function balanceOf(address _owner) public view returns (uint256) {
         return balance[_owner];
+    }
+
+    function transfer(address _to, uint256 _value) public returns (bool) {
+        require(balance[msg.sender] >= _value, 'Not enough balance');
+
+        balance[msg.sender] -= _value;
+        balance[_to] += _value;
+
+        return true;
     }
 }
