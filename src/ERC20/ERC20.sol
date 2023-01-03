@@ -5,11 +5,14 @@ pragma solidity ^0.8.17;
 import "./IERC20.sol";
 
 contract ERC20 is IERC20 {
+
     string public _name;
     string public _symbol;
     uint8 public _decimals;
     uint256 public _totalSupply;
     mapping(address => uint256) balance;
+
+    event Transfer(address from , address to, uint256 value);
 
     constructor(string memory _name, string memory _symbol, uint8 _decimals, uint8  _totalSupply) {
         _name = _name;
@@ -46,7 +49,7 @@ contract ERC20 is IERC20 {
 
         balance[msg.sender] -= _value;
         balance[_to] += _value;
-
+        emit Transfer(msg.sender, _to, _value);
         return true;
     }
 }
