@@ -721,8 +721,8 @@
       }
     },
     "src/Counter.sol": {
-      "lastModificationDate": 1672670228535,
-      "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
+      "lastModificationDate": 1672841527540,
+      "contentHash": "b5716788da006a171b2b48f779c6363c",
       "sourceName": "src/Counter.sol",
       "solcConfig": {
         "settings": {
@@ -761,8 +761,8 @@
       }
     },
     "src/ERC20/ERC20.sol": {
-      "lastModificationDate": 1672787671362,
-      "contentHash": "171055ce117986666145c495f5bba545",
+      "lastModificationDate": 1672840964633,
+      "contentHash": "e359e99145a6fb49ad5e3e5f2e57c3bc",
       "sourceName": "src/ERC20/ERC20.sol",
       "solcConfig": {
         "settings": {
@@ -803,8 +803,8 @@
       }
     },
     "src/ERC20/IERC20.sol": {
-      "lastModificationDate": 1672787590570,
-      "contentHash": "42c2d37bb1b988f1b0cc0faf385bde30",
+      "lastModificationDate": 1672832662413,
+      "contentHash": "72f935b411536583aa3b30eafccd6108",
       "sourceName": "src/ERC20/IERC20.sol",
       "solcConfig": {
         "settings": {
@@ -842,9 +842,66 @@
         }
       }
     },
+    "src/ERC20/test/ERC20.t.sol": {
+      "lastModificationDate": 1672841383813,
+      "contentHash": "5ef4fdb49533501b93350ba68d31524f",
+      "sourceName": "src/ERC20/test/ERC20.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "src/ERC20/ERC20.sol",
+        "src/ERC20/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "ERC20Test": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "ERC20.t.sol/ERC20Test.json"
+        }
+      }
+    },
     "test/Counter.t.sol": {
-      "lastModificationDate": 1672670228535,
-      "contentHash": "b1a6521ba9c61d5266bab1fc9a057d68",
+      "lastModificationDate": 1672841619815,
+      "contentHash": "a741b61d23657e3888536ff178012d10",
       "sourceName": "test/Counter.t.sol",
       "solcConfig": {
         "settings": {

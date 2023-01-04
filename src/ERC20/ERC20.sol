@@ -10,18 +10,18 @@ contract ERC20 is IERC20 {
     string private _symbol;
     uint8 private _decimals;
     uint256 private _totalSupply;
-    mapping(address => uint256) balances;
+    mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) _allowed;
 
 
-    constructor(string memory _tokenName, string memory _tokenSymbol, uint8 _decimalUnits, uint8  _initialSupply) {
+    constructor(string memory _tokenName, string memory _tokenSymbol, uint8 _decimalUnits, uint256  _initialSupply) {
         _name = _tokenName;
         _symbol = _tokenSymbol;
         _decimals = _decimalUnits;
         _totalSupply = _initialSupply;
 
         // transfer to msg.sender
-        balances[msg.sender] = _totalSupply;
+        _balances[msg.sender] = _totalSupply;
     }
 
     function name() public view returns (string memory) {
@@ -41,32 +41,31 @@ contract ERC20 is IERC20 {
     }
 
     function balanceOf(address _owner) public view returns (uint256) {
-        return balances[_owner];
+        return _balances[_owner];
     }
 
     function transfer(address _to, uint256 _value) public returns (bool) {
-        require(balances[msg.sender] >= _value, 'Not enough balance');
-        require(_to != address(0), "Can't transfer to token contract");
+        require(_balances[msg.sender] >= _value, 'Not enough balance');
 
-        balances[msg.sender] -= _value;
-        balances[_to] += _value;
+        _balances[msg.sender] -= _value;
+        _balances[_to] += _value;
         emit Transfer(msg.sender, _to, _value);
         return true;
     }
 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {
-        require(balances[_from] >= _value, 'Not enough balance from _from');
+        require(_balances[_from] >= _value, 'Not enough balance from _from');
         require(_allowed[_from][msg.sender] >= _value, 'Not enough allowance');
 
-        balances[_from] -= _value;
-        balances[_to] += _value;
+        _balances[_from] -= _value;
+        _balances[_to] += _value;
         _allowed[_from][msg.sender] -= _value;
 
         return true;
     }
 
     function approve(address _spender, uint256 _value) public returns (bool) {
-        require(balances[msg.sender] >= _value, 'Not enough balance');
+        require(_balances[msg.sender] >= _value, 'Not enough balance');
         _allowed[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value);
 
