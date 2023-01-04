@@ -10,7 +10,6 @@ contract ERC20Test is Test {
 
     function setUp() public {
         token = new ERC20('TestToken', 'TT', 18, 25000000000000000000000);
-        console.log(msg.sender);
     }
 
     function testName() public {
@@ -30,8 +29,17 @@ contract ERC20Test is Test {
     }
 
     function testCreaterReceivedInitialSupply() public {
-        console.log(token.balanceOf(address(this)));
-        console.log(msg.sender);
+   
         assertEq(token.balanceOf(address(this)), 25000000000000000000000);
+    }
+
+    function testTransfer() public {
+        uint256 fromBalanceBefore = token.balanceOf(address(this));
+        uint256 toBalanceBefore = token.balanceOf(address(0));
+        token.transfer(address(0), 20e18);
+
+        assertEq(token.balanceOf(address(0)), toBalanceBefore + 20e18);
+        assertEq(token.balanceOf(address(this)), fromBalanceBefore - 20e18);
+
     }
 }

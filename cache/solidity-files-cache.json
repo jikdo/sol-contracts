@@ -721,8 +721,8 @@
       }
     },
     "src/Counter.sol": {
-      "lastModificationDate": 1672841527540,
-      "contentHash": "b5716788da006a171b2b48f779c6363c",
+      "lastModificationDate": 1672841667819,
+      "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
       "sourceName": "src/Counter.sol",
       "solcConfig": {
         "settings": {
@@ -843,8 +843,8 @@
       }
     },
     "src/ERC20/test/ERC20.t.sol": {
-      "lastModificationDate": 1672841383813,
-      "contentHash": "5ef4fdb49533501b93350ba68d31524f",
+      "lastModificationDate": 1672852009465,
+      "contentHash": "2a017485b24de33b0fe8ed82f66a3c00",
       "sourceName": "src/ERC20/test/ERC20.t.sol",
       "solcConfig": {
         "settings": {
@@ -900,8 +900,8 @@
       }
     },
     "test/Counter.t.sol": {
-      "lastModificationDate": 1672841619815,
-      "contentHash": "a741b61d23657e3888536ff178012d10",
+      "lastModificationDate": 1672841653647,
+      "contentHash": "72a990d56b4158551e919d062cb46c67",
       "sourceName": "test/Counter.t.sol",
       "solcConfig": {
         "settings": {
