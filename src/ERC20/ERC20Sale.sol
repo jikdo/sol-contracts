@@ -6,6 +6,23 @@ import "./IERC20.sol";
 import "./IERC20Sale.sol";
 
 contract ERC20Sale is ERC20, IERC20Sale {
+    uint256 public price;
+
+    constructor (
+        string memory _tokenName,
+        string memory _tokenSymbol,
+        uint8 _decimalUnits,
+        uint256  _initialSupply,
+        uint256 _price
+    ) 
+    ERC20 (
+        _tokenName,
+        _tokenSymbol,
+        _decimalUnits,
+        _initialSupply
+    ) {
+        price = _price;
+    }
 
     function mint() public returns (bool) {
         return true;
@@ -16,6 +33,6 @@ contract ERC20Sale is ERC20, IERC20Sale {
     }
 
     function price() public view returns (uint256) {
-
+        
     }
 } 
