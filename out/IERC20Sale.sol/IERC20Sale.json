@@ -1,0 +1,278 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "buy",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "buy()": "a6f2ae3a",
+    "getPrice()": "98d5fdca"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"buy\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/ERC20/IERC20Sale.sol\":\"IERC20Sale\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/ERC20/IERC20Sale.sol\":{\"keccak256\":\"0x85ce2cafcf35831804cc837c171db1ae4a708e71a7d9c2f4fd7e54629ec55399\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f530387c29757bad41a1368c89c339692a919da2ee72871ab26914b810fbe1ee\",\"dweb:/ipfs/QmSJriejrvW788LcJNM8X2akuzrrmHpAk1baoDhGTMW7ET\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "buy",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPrice",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/ERC20/IERC20Sale.sol": "IERC20Sale"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/ERC20/IERC20Sale.sol": {
+        "keccak256": "0x85ce2cafcf35831804cc837c171db1ae4a708e71a7d9c2f4fd7e54629ec55399",
+        "urls": [
+          "bzz-raw://f530387c29757bad41a1368c89c339692a919da2ee72871ab26914b810fbe1ee",
+          "dweb:/ipfs/QmSJriejrvW788LcJNM8X2akuzrrmHpAk1baoDhGTMW7ET"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/ERC20/IERC20Sale.sol",
+    "id": 25893,
+    "exportedSymbols": {
+      "IERC20Sale": [
+        25892
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:168:17",
+    "nodes": [
+      {
+        "id": 25881,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:17",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 25892,
+        "nodeType": "ContractDefinition",
+        "src": "58:142:17",
+        "nodes": [
+          {
+            "id": 25886,
+            "nodeType": "FunctionDefinition",
+            "src": "85:56:17",
+            "nodes": [],
+            "functionSelector": "a6f2ae3a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buy",
+            "nameLocation": "94:3:17",
+            "parameters": {
+              "id": 25882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "97:2:17"
+            },
+            "returnParameters": {
+              "id": 25885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25884,
+                  "mutability": "mutable",
+                  "name": "success",
+                  "nameLocation": "132:7:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25886,
+                  "src": "127:12:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 25883,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "127:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "126:14:17"
+            },
+            "scope": 25892,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 25891,
+            "nodeType": "FunctionDefinition",
+            "src": "146:52:17",
+            "nodes": [],
+            "functionSelector": "98d5fdca",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nameLocation": "155:8:17",
+            "parameters": {
+              "id": 25887,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "163:2:17"
+            },
+            "returnParameters": {
+              "id": 25890,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25889,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25891,
+                  "src": "189:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 25888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "189:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "188:9:17"
+            },
+            "scope": 25892,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC20Sale",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          25892
+        ],
+        "name": "IERC20Sale",
+        "nameLocation": "68:10:17",
+        "scope": 25893,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 17
+}

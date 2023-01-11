@@ -7,6 +7,7 @@ import "./IERC20Sale.sol";
 
 contract ERC20Sale is ERC20, IERC20Sale {
     uint256 private price;
+    // TODO start and close time
 
     constructor (
         string memory _tokenName,
