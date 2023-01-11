@@ -32,7 +32,7 @@ contract ERC20Sale is ERC20, IERC20Sale {
         return true;
     }
 
-    function price() public view returns (uint256) {
-        
+    function getPrice() public view returns (uint256) {
+        return price;
     }
 } 
