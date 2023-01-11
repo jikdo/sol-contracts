@@ -6,7 +6,7 @@ import "./IERC20.sol";
 import "./IERC20Sale.sol";
 
 contract ERC20Sale is ERC20, IERC20Sale {
-    uint256 public price;
+    uint256 private price;
 
     constructor (
         string memory _tokenName,
@@ -24,11 +24,9 @@ contract ERC20Sale is ERC20, IERC20Sale {
         price = _price;
     }
 
-    function mint() public returns (bool) {
-        return true;
-    }
-
-    function burn() public returns (bool) {
+    function buy() public payable  returns (bool) {
+        uint256 amount = msg.value / price;
+        transfer(msg.sender, amount);
         return true;
     }
 

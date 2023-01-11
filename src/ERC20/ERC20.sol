@@ -6,11 +6,11 @@ import "./IERC20.sol";
 
 contract ERC20 is IERC20 {
 
-    string private _name;
-    string private _symbol;
-    uint8 private _decimals;
-    uint256 private _totalSupply;
-    mapping(address => uint256) private _balances;
+    string internal _name;
+    string internal _symbol;
+    uint8 internal _decimals;
+    uint256 internal _totalSupply;
+    mapping(address => uint256) internal _balances;
     mapping(address => mapping(address => uint256)) _allowed;
 
 
